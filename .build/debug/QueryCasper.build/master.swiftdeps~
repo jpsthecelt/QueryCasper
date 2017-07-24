@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "8bd1dd5073d39e1efacd0e77d443d471"
+build_time: [554131046, 15856000]
+inputs:
+  "/Users/wz3264/dev/swift/QueryCasper/Sources/main.swift": [554131032, 0]
