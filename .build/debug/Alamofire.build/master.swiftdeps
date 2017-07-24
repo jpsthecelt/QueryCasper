@@ -1,0 +1,21 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "19e707c9872ecacda329119b80bbba2f"
+build_time: [554130906, 585147000]
+inputs:
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/AFError.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Alamofire.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/DispatchQueue+Alamofire.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/MultipartFormData.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/NetworkReachabilityManager.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Notifications.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/ParameterEncoding.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Request.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Response.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/ResponseSerialization.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Result.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/ServerTrustPolicy.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/SessionDelegate.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/SessionManager.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/TaskDelegate.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Timeline.swift": [554130889, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Validation.swift": [554130889, 0]

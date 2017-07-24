@@ -6,10 +6,12 @@
 //  Created by John Singer on 7/13/17.
 //  Copyright © 2017 John Singer. All rights reserved.
 //
+// This has recently shown very odd behavior: When I run this in the debugger, it fails and shows the
+//      equivalent CURL command, when I run it on the commandline, it works (but shows XML).
 
 import SwiftyJSON
 import Foundation
-import Just
+import Alamofire
 
 let pattern = "f:u:p:"
 var fFlag = false
@@ -22,6 +24,12 @@ var pFlag = false
 var pValue: String?
 
 let url = "https://casper.csueastbay.edu:8443/JSSResource/"
+var headers: HTTPHeaders = [
+    "Accept": "application/json"
+]
+// Usage: QueryCasper -f json_authorization_file.txt -p sub_url or
+//        QueryCasper -u username:password -p sub_url 
+// NOTE: -f & -u are mutually-exclusive
 
 while case let option = getopt(CommandLine.argc, CommandLine.unsafeArgv, pattern), option != -1 {
     switch UnicodeScalar(CUnsignedChar(option)) {
@@ -53,7 +61,7 @@ guard  uFlag != fFlag else {
 
 print("fFlag = \(fFlag) and fValue = ", fVal ?? "?")
 print("uFlag = \(uFlag) and uValue = ", uValue ?? "?", "\n")
-print("uFlag = \(pFlag) and uValue = ", pValue ?? "?", "\n")
+print("pFlag = \(pFlag) and pValue = ", pValue ?? "?", "\n")
 
 // Now, if the fFlag is set, we've gotten our parameter file from the command-line, so we'll try to read it, parse, it and
 //    use it to access JAMF.
@@ -63,18 +71,19 @@ if fFlag {
 
         if let authProps = filedata.data(using: String.Encoding.utf8, allowLossyConversion: false) {
             let json = JSON(data: authProps)
-            let username = json["username"].string
+            let user = json["username"].string
             let password = json["password"].string
             
-//            print("username,password is: \(json["username"]), \(json["password"])")
-            
-            let r = Just.get(url+(pValue ?? "INVALID-URL"), auth:((username, password) as! (String, String)))
-            if !r.ok {
-                print("Boo! It didn't work: \(r.statusCode ?? -1)")
-            } else {
-                print("yay! Here's the requested output:\n\(r.text ?? "uh, oh! Something wrong with returned data")")
-//                print(r.json)
+            if let authorizationHeader = Request.authorizationHeader(user: user!, password: password!) {
+                headers[authorizationHeader.key] = authorizationHeader.value
             }
+            
+            print("headers: \(headers)")
+            let r = Alamofire.request(url+pValue!, headers: headers)
+                .responseJSON { response in
+                    debugPrint(response)
+            }
+            debugPrint(r)
         }
    }
 }

@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "323C02C627C8353FA84F2B2F20EDA130EE64C8AF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BC949C044609264A7DE78DBBB5DCDDF5E033DADA" : 9223372036854775807,
+    "323C02C627C8353FA84F2B2F20EDA130EE64C8AF" : 9223372036854775807,
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
+    "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AFA34A16-6BE4-4249-B928-A6B3FCB29E6D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BC949C044609264A7DE78DBBB5DCDDF5E033DADA" : "QueryCasper\/.build\/checkouts\/Just.git--7253994209659931702\/",
+    "323C02C627C8353FA84F2B2F20EDA130EE64C8AF" : "QueryCasper\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "QueryCasper\/.build\/checkouts\/SwiftyJSON.git-3043514560129222422\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "QueryCasper\/.build\/checkouts\/Alamofire.git-6801331143877184500\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "QueryCasper",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "QueryCasper.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jpsthecelt\/QueryCasper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "323C02C627C8353FA84F2B2F20EDA130EE64C8AF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/wz3264\/dev\/swift\/QueryCasper\/.build\/repositories\/Alamofire.git-6801331143877184500",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/wz3264\/dev\/swift\/QueryCasper\/.build\/repositories\/Just.git--7253994209659931702",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BC949C044609264A7DE78DBBB5DCDDF5E033DADA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/wz3264\/dev\/swift\/QueryCasper\/.build\/repositories\/SwiftyJSON.git-3043514560129222422",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "668f17864fe437aaf43f26bdf54963a4"
+build_time: [554130906, 584532000]
+inputs:
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/Just.git--7253994209659931702/Sources/Just/Just.swift": [554130889, 0]
