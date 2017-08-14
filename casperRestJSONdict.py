@@ -2,11 +2,11 @@ import requests
 import xmltodict
 import json
 
-user = 'wz3264'
-pwd = 'an.khong.noi.roi1'
+user = 'yourusername'
+pwd = 'yourpwd'
 OK = 200
 
-url = 'https://casper.csueastbay.edu:8443/JSSResource/'
+url = 'https://yourjsshere:8443/JSSResource/'
 
 r = requests.get(url+'mobiledevices', verify=False, auth=(user,pwd), headers={'Accept': 'application/json'})
 
