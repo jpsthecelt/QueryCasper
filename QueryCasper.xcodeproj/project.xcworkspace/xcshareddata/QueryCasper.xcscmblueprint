@@ -11,10 +11,10 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AFA34A16-6BE4-4249-B928-A6B3FCB29E6D",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "BC949C044609264A7DE78DBBB5DCDDF5E033DADA" : "QueryCasper\/.build\/checkouts\/Just.git--7253994209659931702\/",
-    "323C02C627C8353FA84F2B2F20EDA130EE64C8AF" : "QueryCasper\/",
-    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "QueryCasper\/.build\/checkouts\/SwiftyJSON.git-3043514560129222422\/",
-    "67620B5EFA902936DF04070AF595B76AB0333747" : "QueryCasper\/.build\/checkouts\/Alamofire.git-6801331143877184500\/"
+    "BC949C044609264A7DE78DBBB5DCDDF5E033DADA" : "oldQueryCasper\/.build\/checkouts\/Just.git--7253994209659931702\/",
+    "323C02C627C8353FA84F2B2F20EDA130EE64C8AF" : "oldQueryCasper\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "oldQueryCasper\/.build\/checkouts\/SwiftyJSON.git-3043514560129222422\/",
+    "67620B5EFA902936DF04070AF595B76AB0333747" : "oldQueryCasper\/.build\/checkouts\/Alamofire.git-6801331143877184500\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "QueryCasper",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,

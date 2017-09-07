@@ -24,9 +24,11 @@ var pFlag = false
 var pValue: String?
 
 let url = "https://casper.csueastbay.edu:8443/JSSResource/"
-var headers: HTTPHeaders = [
-    "Accept": "application/json"
-]
+var headers: HTTPHeaders = [:]
+
+
+
+
 // Usage: QueryCasper -f json_authorization_file.txt -p sub_url or
 //        QueryCasper -u username:password -p sub_url 
 // NOTE: -f & -u are mutually-exclusive
@@ -73,13 +75,16 @@ if fFlag {
             let json = JSON(data: authProps)
             let user = json["username"].string
             let password = json["password"].string
-            
+
             if let authorizationHeader = Request.authorizationHeader(user: user!, password: password!) {
                 headers[authorizationHeader.key] = authorizationHeader.value
+                headers["Accept"] = "application/json"
             }
             
-            print("headers: \(headers)")
-            let r = Alamofire.request(url+pValue!, headers: headers)
+            print("headers: \(headers)\n")
+            
+            var r = Alamofire.request(url+pValue!, headers: headers)
+
                 .responseJSON { response in
                     debugPrint(response)
             }
