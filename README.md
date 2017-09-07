@@ -7,4 +7,7 @@ Initially started out with URLRequest and Alamofire, but both seem problematic i
 finally had success with the library Just (which is patterned after python's requests).
 (I should probably study how Just translates requests-style calls to URLRequest ).
 
+Note that authorization is done via a commandline reference to a JSON file with username/password
+(-a /Users/xyz/authorization.txt, e.g.).
+
 jpsinger - incept: 071017, currently: 091017
