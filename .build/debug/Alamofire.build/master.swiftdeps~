@@ -1,6 +1,6 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
 options: "95ce90d3a03c501d4b3dcf968b13b73c"
-build_time: [554393429, 512969000]
+build_time: [555602123, 399404000]
 inputs:
   "/Users/wz3264/dev/swift/oldQueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/AFError.swift": !dirty [554130889, 0]
   "/Users/wz3264/dev/swift/oldQueryCasper/.build/checkouts/Alamofire.git-6801331143877184500/Source/Alamofire.swift": !dirty [554130889, 0]

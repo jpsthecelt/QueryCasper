@@ -1,66 +1,115 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "jssRestFunction"
 - "pattern"
-- "fFlag"
-- "fVal"
+- "aFlag"
+- "aVal"
 - "uFlag"
 - "uValue"
+- "sFlag"
+- "sValue"
 - "pFlag"
 - "pValue"
-- "url"
+- "gFlag"
+- "gValue"
+- "jssUrl"
+- "jssGroupName"
+- "textField"
+- "JSS"
 provides-nominal:
+- "O11QueryCasper15jssRestFunction"
+- "C11QueryCasper3JSS"
 provides-member:
+- ["O11QueryCasper15jssRestFunction", ""]
+- ["C11QueryCasper3JSS", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "!"
 - "!="
-- "+"
+- !private "+"
+- !private "..<"
+- "=="
 - "??"
+- !private "Array"
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
 - "CUnsignedChar"
 - "CastingPrecedence"
 - "CommandLine"
+- !private "Dictionary"
 - "EXIT_FAILURE"
 - "FloatLiteralType"
+- !private "Int"
 - "IntegerLiteralType"
 - "JSON"
-- "Just"
+- !private "JSONSerialization"
+- "JSS"
+- !private "Just"
 - "String"
 - "StringLiteralType"
 - "UnicodeScalar"
 - "UnicodeScalarType"
+- "aFlag"
+- "aVal"
 - "exit"
-- "fFlag"
-- "fVal"
+- "gFlag"
+- "gValue"
 - "getopt"
+- "jssGroupName"
+- "jssRestFunction"
+- "jssUrl"
 - "optarg"
 - "pFlag"
 - "pValue"
 - "pattern"
 - "print"
+- "sFlag"
+- "sValue"
+- "textField"
 - "uFlag"
 - "uValue"
-- "url"
 - !private "~="
 depends-member:
 - ["Ps9AnyObject", "Encoding"]
+- !private ["Ps9AnyObject", "JSONSerialization"]
+- !private ["Ps9AnyObject", "Just"]
+- !private ["Ps9AnyObject", "String"]
+- ["Ps9AnyObject", "addComputerToGroup"]
+- !private ["Ps9AnyObject", "baseJssUrl"]
+- ["Ps9AnyObject", "createPlaceholder"]
 - ["Ps9AnyObject", "data"]
+- ["Ps9AnyObject", "getComputerGroups"]
+- ["Ps9AnyObject", "getComputerRecord"]
+- ["Ps9AnyObject", "getComputers"]
+- ["Ps9AnyObject", "getMobiles"]
 - ["Ps9AnyObject", "init"]
-- ["Ps9AnyObject", "ok"]
-- ["Ps9AnyObject", "statusCode"]
-- ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "jsonObject"]
+- !private ["Ps9AnyObject", "jssPassword"]
+- !private ["Ps9AnyObject", "jssUrl"]
+- !private ["Ps9AnyObject", "jssUsername"]
+- !private ["Ps9AnyObject", "ok"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", "removeComputerFromGroup"]
+- !private ["Ps9AnyObject", "statusCode"]
+- !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "count"]
 - ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "count"]
 - ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps17BitwiseOperations", "hashValue"]
 - ["Ps17BitwiseOperations", "init"]
 - ["Sb", "_getBuiltinLogicValue"]
 - ["Ps7CVarArg", "Encoding"]
+- !private ["Ps7CVarArg", "count"]
 - ["Ps7CVarArg", "data"]
+- !private ["Ps7CVarArg", "hashValue"]
 - ["Ps7CVarArg", "init"]
-- ["Ps7CVarArg", "ok"]
-- ["Ps7CVarArg", "statusCode"]
+- !private ["Ps7CVarArg", "jsonObject"]
+- !private ["Ps7CVarArg", "ok"]
+- !private ["Ps7CVarArg", "statusCode"]
 - ["Ps7CVarArg", "subscript"]
-- ["Ps7CVarArg", "text"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["Ps10Collection", "count"]
 - ["Ps10Collection", "init"]
 - ["Ps10Collection", "string"]
 - ["Ps10Collection", "subscript"]
@@ -69,47 +118,70 @@ depends-member:
 - ["Os11CommandLine", "unsafeArgv"]
 - ["Ps10Comparable", "Encoding"]
 - ["Ps10Comparable", "data"]
+- !private ["Ps10Comparable", "hashValue"]
 - ["Ps10Comparable", "init"]
 - ["Ps10Comparable", "string"]
 - ["Ps10Comparable", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "Encoding"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
 - ["Ps28CustomDebugStringConvertible", "data"]
 - ["Ps28CustomDebugStringConvertible", "init"]
-- ["Ps28CustomDebugStringConvertible", "ok"]
-- ["Ps28CustomDebugStringConvertible", "statusCode"]
+- !private ["Ps28CustomDebugStringConvertible", "jsonObject"]
+- !private ["Ps28CustomDebugStringConvertible", "ok"]
+- !private ["Ps28CustomDebugStringConvertible", "statusCode"]
 - ["Ps28CustomDebugStringConvertible", "string"]
 - ["Ps28CustomDebugStringConvertible", "subscript"]
-- ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps29CustomPlaygroundQuickLookable", "Encoding"]
 - ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "data"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
 - ["Ps17CustomReflectable", "Encoding"]
 - ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "count"]
 - ["Ps17CustomReflectable", "data"]
+- !private ["Ps17CustomReflectable", "hashValue"]
 - ["Ps17CustomReflectable", "init"]
 - ["Ps17CustomReflectable", "subscript"]
 - ["Ps23CustomStringConvertible", "Encoding"]
 - ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "count"]
 - ["Ps23CustomStringConvertible", "data"]
+- !private ["Ps23CustomStringConvertible", "hashValue"]
 - ["Ps23CustomStringConvertible", "init"]
-- ["Ps23CustomStringConvertible", "ok"]
-- ["Ps23CustomStringConvertible", "statusCode"]
+- !private ["Ps23CustomStringConvertible", "jsonObject"]
+- !private ["Ps23CustomStringConvertible", "ok"]
+- !private ["Ps23CustomStringConvertible", "statusCode"]
 - ["Ps23CustomStringConvertible", "string"]
 - ["Ps23CustomStringConvertible", "subscript"]
-- ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "utf8"]
+- !private ["Vs10Dictionary", "subscript"]
 - ["VE10FoundationSS8Encoding", "utf8"]
 - ["Ps9Equatable", "Encoding"]
 - ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_toAnyHashable"]
+- ["Ps9Equatable", "addcomputertogroup"]
+- ["Ps9Equatable", "computergroups"]
+- ["Ps9Equatable", "computermatch"]
+- ["Ps9Equatable", "computers"]
+- ["Ps9Equatable", "createplaceholder"]
 - ["Ps9Equatable", "data"]
+- ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "init"]
-- ["Ps9Equatable", "ok"]
-- ["Ps9Equatable", "statusCode"]
+- !private ["Ps9Equatable", "jsonObject"]
+- ["Ps9Equatable", "mobiledevices"]
+- !private ["Ps9Equatable", "ok"]
+- ["Ps9Equatable", "rawValue"]
+- ["Ps9Equatable", "removecomputerfromgroup"]
+- !private ["Ps9Equatable", "statusCode"]
 - ["Ps9Equatable", "string"]
 - ["Ps9Equatable", "subscript"]
-- ["Ps9Equatable", "text"]
+- !private ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "utf8"]
+- ["Ps9Equatable", ""]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
 - ["Ps25ExpressibleByArrayLiteral", "init"]
 - ["Ps25ExpressibleByArrayLiteral", "string"]
 - ["Ps25ExpressibleByArrayLiteral", "subscript"]
@@ -128,6 +200,7 @@ depends-member:
 - ["Ps25ExpressibleByFloatLiteral", "init"]
 - ["Ps25ExpressibleByFloatLiteral", "string"]
 - ["Ps25ExpressibleByFloatLiteral", "subscript"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "hashValue"]
 - ["Ps27ExpressibleByIntegerLiteral", "init"]
 - ["Ps27ExpressibleByIntegerLiteral", "string"]
 - ["Ps27ExpressibleByIntegerLiteral", "subscript"]
@@ -144,33 +217,71 @@ depends-member:
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "string"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "subscript"]
-- ["C4Just10HTTPResult", "ok"]
-- ["C4Just10HTTPResult", "statusCode"]
-- ["C4Just10HTTPResult", "text"]
+- !private ["C4Just10HTTPResult", "ok"]
+- !private ["C4Just10HTTPResult", "statusCode"]
+- !private ["C4Just10HTTPResult", "text"]
 - ["Ps8Hashable", "Encoding"]
 - ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_toAnyHashable"]
+- ["Ps8Hashable", "addcomputertogroup"]
+- ["Ps8Hashable", "computergroups"]
+- ["Ps8Hashable", "computermatch"]
+- ["Ps8Hashable", "computers"]
+- ["Ps8Hashable", "createplaceholder"]
 - ["Ps8Hashable", "data"]
+- ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
-- ["Ps8Hashable", "ok"]
-- ["Ps8Hashable", "statusCode"]
-- ["Ps8Hashable", "text"]
+- !private ["Ps8Hashable", "jsonObject"]
+- ["Ps8Hashable", "mobiledevices"]
+- !private ["Ps8Hashable", "ok"]
+- ["Ps8Hashable", "rawValue"]
+- ["Ps8Hashable", "removecomputerfromgroup"]
+- !private ["Ps8Hashable", "statusCode"]
+- !private ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "utf8"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "hashValue"]
+- !private ["Ps7Integer", "hashValue"]
 - ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "hashValue"]
 - ["Ps17IntegerArithmetic", "init"]
 - ["V10SwiftyJSON4JSON", "init"]
 - ["V10SwiftyJSON4JSON", "string"]
 - ["V10SwiftyJSON4JSON", "subscript"]
+- !private ["CSo17JSONSerialization", "jsonObject"]
 - ["P10SwiftyJSON17JSONSubscriptType", "Encoding"]
 - ["P10SwiftyJSON17JSONSubscriptType", "data"]
+- !private ["P10SwiftyJSON17JSONSubscriptType", "hashValue"]
 - ["P10SwiftyJSON17JSONSubscriptType", "init"]
-- ["V4Just6JustOf", "get"]
+- !private ["C11QueryCasper3JSS", "Int"]
+- !private ["C11QueryCasper3JSS", "JSONSerialization"]
+- !private ["C11QueryCasper3JSS", "Just"]
+- ["C11QueryCasper3JSS", "String"]
+- ["C11QueryCasper3JSS", "addComputerToGroup"]
+- !private ["C11QueryCasper3JSS", "baseJssUrl"]
+- ["C11QueryCasper3JSS", "createPlaceholder"]
+- ["C11QueryCasper3JSS", "deinit"]
+- ["C11QueryCasper3JSS", "getComputerGroups"]
+- ["C11QueryCasper3JSS", "getComputerRecord"]
+- ["C11QueryCasper3JSS", "getComputers"]
+- ["C11QueryCasper3JSS", "getMobiles"]
+- ["C11QueryCasper3JSS", "init"]
+- !private ["C11QueryCasper3JSS", "jssPassword"]
+- !private ["C11QueryCasper3JSS", "jssUrl"]
+- !private ["C11QueryCasper3JSS", "jssUsername"]
+- !private ["C11QueryCasper3JSS", "print"]
+- ["C11QueryCasper3JSS", "removeComputerFromGroup"]
+- !private ["V4Just6JustOf", "get"]
+- !private ["V4Just6JustOf", "post"]
 - ["Ps25LosslessStringConvertible", "Encoding"]
 - ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps25LosslessStringConvertible", "data"]
 - ["Ps25LosslessStringConvertible", "init"]
 - ["Ps10MirrorPath", "Encoding"]
 - ["Ps10MirrorPath", "data"]
+- !private ["Ps10MirrorPath", "hashValue"]
 - ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "count"]
 - ["Ps17MutableCollection", "subscript"]
 - ["PSo8NSCoding", "Encoding"]
 - ["PSo8NSCoding", "data"]
@@ -183,31 +294,50 @@ depends-member:
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Encoding"]
 - ["CSo8NSObject", "data"]
-- ["CSo8NSObject", "ok"]
-- ["CSo8NSObject", "statusCode"]
-- ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "jsonObject"]
+- !private ["CSo8NSObject", "ok"]
+- !private ["CSo8NSObject", "statusCode"]
+- !private ["CSo8NSObject", "text"]
 - ["PSo16NSObjectProtocol", "Encoding"]
 - ["PSo16NSObjectProtocol", "data"]
 - ["PSo16NSObjectProtocol", "init"]
-- ["PSo16NSObjectProtocol", "ok"]
-- ["PSo16NSObjectProtocol", "statusCode"]
-- ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "jsonObject"]
+- !private ["PSo16NSObjectProtocol", "ok"]
+- !private ["PSo16NSObjectProtocol", "statusCode"]
+- !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo14NSSecureCoding", "Encoding"]
 - ["PSo14NSSecureCoding", "data"]
 - ["PSo14NSSecureCoding", "init"]
 - ["CSo8NSString", "Encoding"]
 - ["CSo8NSString", "data"]
 - ["CSo8NSString", "init"]
+- !private ["Ps22RandomAccessCollection", "count"]
 - ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
 - ["Ps26RangeReplaceableCollection", "subscript"]
+- ["Ps16RawRepresentable", "_toAnyHashable"]
+- ["Ps16RawRepresentable", "addcomputertogroup"]
+- ["Ps16RawRepresentable", "computergroups"]
+- ["Ps16RawRepresentable", "computermatch"]
+- ["Ps16RawRepresentable", "computers"]
+- ["Ps16RawRepresentable", "createplaceholder"]
+- ["Ps16RawRepresentable", "hashValue"]
 - ["Ps16RawRepresentable", "init"]
+- ["Ps16RawRepresentable", "mobiledevices"]
+- ["Ps16RawRepresentable", "rawValue"]
+- ["Ps16RawRepresentable", "removecomputerfromgroup"]
 - ["Ps16RawRepresentable", "string"]
 - ["Ps16RawRepresentable", "subscript"]
 - ["Ps16RawRepresentable", "utf8"]
+- ["Ps16RawRepresentable", ""]
+- !private ["Ps8Sequence", "count"]
 - ["Ps8Sequence", "init"]
 - ["Ps8Sequence", "string"]
 - ["Ps8Sequence", "subscript"]
+- !private ["Ps13SignedInteger", "hashValue"]
+- !private ["Ps12SignedNumber", "hashValue"]
 - ["Vs5Slice", "string"]
+- !private ["Ps10Strideable", "hashValue"]
 - ["Ps10Strideable", "init"]
 - ["SS", "Encoding"]
 - ["SS", "data"]
@@ -221,14 +351,18 @@ depends-member:
 - ["Vs5UInt8", "init"]
 - ["Sc", "init"]
 - ["Ps15UnsignedInteger", "init"]
+- !private ["Ps14_ArrayProtocol", "count"]
 - ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
 - ["Ps23_BidirectionalIndexable", "subscript"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
 - ["Ps24_DestructorSafeContainer", "subscript"]
 - ["Ps28_DisallowMixedSignArithmetic", "init"]
 - ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "Encoding"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "data"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "hashValue"]
 - ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "Encoding"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "data"]
@@ -247,31 +381,68 @@ depends-member:
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - ["Ps9_Hashable", "Encoding"]
 - ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_toAnyHashable"]
+- ["Ps9_Hashable", "addcomputertogroup"]
+- ["Ps9_Hashable", "computergroups"]
+- ["Ps9_Hashable", "computermatch"]
+- ["Ps9_Hashable", "computers"]
+- ["Ps9_Hashable", "createplaceholder"]
 - ["Ps9_Hashable", "data"]
+- ["Ps9_Hashable", "hashValue"]
 - ["Ps9_Hashable", "init"]
-- ["Ps9_Hashable", "ok"]
-- ["Ps9_Hashable", "statusCode"]
-- ["Ps9_Hashable", "text"]
+- !private ["Ps9_Hashable", "jsonObject"]
+- ["Ps9_Hashable", "mobiledevices"]
+- !private ["Ps9_Hashable", "ok"]
+- ["Ps9_Hashable", "rawValue"]
+- ["Ps9_Hashable", "removecomputerfromgroup"]
+- !private ["Ps9_Hashable", "statusCode"]
+- !private ["Ps9_Hashable", "text"]
 - ["Ps9_Hashable", "utf8"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps14_Incrementable", "hashValue"]
 - ["Ps14_Incrementable", "init"]
+- !private ["Ps10_Indexable", "count"]
 - ["Ps10_Indexable", "init"]
 - ["Ps10_Indexable", "string"]
 - ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "count"]
 - ["Ps14_IndexableBase", "init"]
 - ["Ps14_IndexableBase", "string"]
 - ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps8_Integer", "hashValue"]
 - ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "hashValue"]
 - ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps17_MutableIndexable", "count"]
 - ["Ps17_MutableIndexable", "subscript"]
 - ["Ps21_ObjectiveCBridgeable", "Encoding"]
 - ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
 - ["Ps21_ObjectiveCBridgeable", "data"]
+- !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps22_RandomAccessIndexable", "count"]
 - ["Ps22_RandomAccessIndexable", "subscript"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
 - ["Ps26_RangeReplaceableIndexable", "subscript"]
+- !private ["Ps14_SignedInteger", "hashValue"]
+- !private ["Ps11_Strideable", "hashValue"]
 - ["Ps11_Strideable", "init"]
 - ["Ps14_StringElement", "init"]
+- ["O11QueryCasper15jssRestFunction", "RawValue"]
+- ["O11QueryCasper15jssRestFunction", "_toAnyHashable"]
+- ["O11QueryCasper15jssRestFunction", "addcomputertogroup"]
+- ["O11QueryCasper15jssRestFunction", "computergroups"]
+- ["O11QueryCasper15jssRestFunction", "computermatch"]
+- ["O11QueryCasper15jssRestFunction", "computers"]
+- ["O11QueryCasper15jssRestFunction", "createplaceholder"]
+- ["O11QueryCasper15jssRestFunction", "deinit"]
+- ["O11QueryCasper15jssRestFunction", "hashValue"]
+- ["O11QueryCasper15jssRestFunction", "init"]
+- ["O11QueryCasper15jssRestFunction", "mobiledevices"]
+- ["O11QueryCasper15jssRestFunction", "rawValue"]
+- ["O11QueryCasper15jssRestFunction", "removecomputerfromgroup"]
 depends-nominal:
 - "Ps9AnyObject"
 - "Sa"
@@ -286,6 +457,7 @@ depends-nominal:
 - "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
 - "VE10FoundationSS8Encoding"
 - "Ps9Equatable"
 - "Ps25ExpressibleByArrayLiteral"
@@ -297,13 +469,16 @@ depends-nominal:
 - "Ps23ExpressibleByNilLiteral"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
-- "C4Just10HTTPResult"
+- !private "C4Just10HTTPResult"
 - "Ps8Hashable"
+- !private "Si"
 - "Ps7Integer"
 - "Ps17IntegerArithmetic"
 - "V10SwiftyJSON4JSON"
+- !private "CSo17JSONSerialization"
 - "P10SwiftyJSON17JSONSubscriptType"
-- "V4Just6JustOf"
+- "C11QueryCasper3JSS"
+- !private "V4Just6JustOf"
 - "Ps25LosslessStringConvertible"
 - "Ps10MirrorPath"
 - "Ps17MutableCollection"
@@ -318,6 +493,8 @@ depends-nominal:
 - "Ps26RangeReplaceableCollection"
 - "Ps16RawRepresentable"
 - "Ps8Sequence"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
 - "Vs5Slice"
 - "Ps10Strideable"
 - "SS"
@@ -348,8 +525,10 @@ depends-nominal:
 - "Ps21_ObjectiveCBridgeable"
 - "Ps22_RandomAccessIndexable"
 - "Ps26_RangeReplaceableIndexable"
+- !private "Ps14_SignedInteger"
 - "Ps11_Strideable"
 - "Ps14_StringElement"
+- "O11QueryCasper15jssRestFunction"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
@@ -367,4 +546,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/wz3264/dev/swift/QueryCasper/.build/debug/Just.swiftmodule"
-interface-hash: "5f6800794fe602f5bb9dbff1266f030d"
+interface-hash: "4ff970676f90ba3e1075906c796e5320"

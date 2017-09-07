@@ -8,32 +8,35 @@ provides-top-level:
 - "pFlag"
 - "pValue"
 - "url"
+- "headers"
 provides-nominal:
 provides-member:
 provides-dynamic-lookup:
 depends-top-level:
-- "!"
 - "!="
 - "+"
 - "??"
+- "Alamofire"
 - "AssignmentPrecedence"
 - "BooleanLiteralType"
 - "CUnsignedChar"
-- "CastingPrecedence"
 - "CommandLine"
 - "EXIT_FAILURE"
 - "FloatLiteralType"
+- "HTTPHeaders"
 - "IntegerLiteralType"
 - "JSON"
-- "Just"
+- "Request"
 - "String"
 - "StringLiteralType"
 - "UnicodeScalar"
 - "UnicodeScalarType"
+- "debugPrint"
 - "exit"
 - "fFlag"
 - "fVal"
 - "getopt"
+- "headers"
 - "optarg"
 - "pFlag"
 - "pValue"
@@ -45,12 +48,10 @@ depends-top-level:
 - !private "~="
 depends-member:
 - ["Ps9AnyObject", "Encoding"]
+- ["Ps9AnyObject", "authorizationHeader"]
 - ["Ps9AnyObject", "data"]
 - ["Ps9AnyObject", "init"]
-- ["Ps9AnyObject", "json"]
-- ["Ps9AnyObject", "ok"]
-- ["Ps9AnyObject", "statusCode"]
-- ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", "responseJSON"]
 - ["Sa", "subscript"]
 - ["Ps23BidirectionalCollection", "subscript"]
 - ["Ps17BitwiseOperations", "init"]
@@ -58,11 +59,7 @@ depends-member:
 - ["Ps7CVarArg", "Encoding"]
 - ["Ps7CVarArg", "data"]
 - ["Ps7CVarArg", "init"]
-- ["Ps7CVarArg", "json"]
-- ["Ps7CVarArg", "ok"]
-- ["Ps7CVarArg", "statusCode"]
 - ["Ps7CVarArg", "subscript"]
-- ["Ps7CVarArg", "text"]
 - ["Ps10Collection", "init"]
 - ["Ps10Collection", "string"]
 - ["Ps10Collection", "subscript"]
@@ -75,14 +72,12 @@ depends-member:
 - ["Ps10Comparable", "string"]
 - ["Ps10Comparable", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "Encoding"]
+- ["Ps28CustomDebugStringConvertible", "authorizationHeader"]
 - ["Ps28CustomDebugStringConvertible", "data"]
 - ["Ps28CustomDebugStringConvertible", "init"]
-- ["Ps28CustomDebugStringConvertible", "json"]
-- ["Ps28CustomDebugStringConvertible", "ok"]
-- ["Ps28CustomDebugStringConvertible", "statusCode"]
+- ["Ps28CustomDebugStringConvertible", "responseJSON"]
 - ["Ps28CustomDebugStringConvertible", "string"]
 - ["Ps28CustomDebugStringConvertible", "subscript"]
-- ["Ps28CustomDebugStringConvertible", "text"]
 - ["Ps29CustomPlaygroundQuickLookable", "Encoding"]
 - ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "data"]
@@ -94,26 +89,22 @@ depends-member:
 - ["Ps17CustomReflectable", "subscript"]
 - ["Ps23CustomStringConvertible", "Encoding"]
 - ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "authorizationHeader"]
 - ["Ps23CustomStringConvertible", "data"]
 - ["Ps23CustomStringConvertible", "init"]
-- ["Ps23CustomStringConvertible", "json"]
-- ["Ps23CustomStringConvertible", "ok"]
-- ["Ps23CustomStringConvertible", "statusCode"]
+- ["Ps23CustomStringConvertible", "responseJSON"]
 - ["Ps23CustomStringConvertible", "string"]
 - ["Ps23CustomStringConvertible", "subscript"]
-- ["Ps23CustomStringConvertible", "text"]
 - ["Ps23CustomStringConvertible", "utf8"]
+- ["C9Alamofire11DataRequest", "responseJSON"]
+- ["Vs10Dictionary", "subscript"]
 - ["VE10FoundationSS8Encoding", "utf8"]
 - ["Ps9Equatable", "Encoding"]
 - ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "data"]
 - ["Ps9Equatable", "init"]
-- ["Ps9Equatable", "json"]
-- ["Ps9Equatable", "ok"]
-- ["Ps9Equatable", "statusCode"]
 - ["Ps9Equatable", "string"]
 - ["Ps9Equatable", "subscript"]
-- ["Ps9Equatable", "text"]
 - ["Ps9Equatable", "utf8"]
 - ["Ps25ExpressibleByArrayLiteral", "init"]
 - ["Ps25ExpressibleByArrayLiteral", "string"]
@@ -149,18 +140,10 @@ depends-member:
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "string"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "subscript"]
-- ["C4Just10HTTPResult", "json"]
-- ["C4Just10HTTPResult", "ok"]
-- ["C4Just10HTTPResult", "statusCode"]
-- ["C4Just10HTTPResult", "text"]
 - ["Ps8Hashable", "Encoding"]
 - ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "data"]
 - ["Ps8Hashable", "init"]
-- ["Ps8Hashable", "json"]
-- ["Ps8Hashable", "ok"]
-- ["Ps8Hashable", "statusCode"]
-- ["Ps8Hashable", "text"]
 - ["Ps8Hashable", "utf8"]
 - ["Ps7Integer", "init"]
 - ["Ps17IntegerArithmetic", "init"]
@@ -170,7 +153,6 @@ depends-member:
 - ["P10SwiftyJSON17JSONSubscriptType", "Encoding"]
 - ["P10SwiftyJSON17JSONSubscriptType", "data"]
 - ["P10SwiftyJSON17JSONSubscriptType", "init"]
-- ["V4Just6JustOf", "get"]
 - ["Ps25LosslessStringConvertible", "Encoding"]
 - ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - ["Ps25LosslessStringConvertible", "data"]
@@ -190,17 +172,9 @@ depends-member:
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Encoding"]
 - ["CSo8NSObject", "data"]
-- ["CSo8NSObject", "json"]
-- ["CSo8NSObject", "ok"]
-- ["CSo8NSObject", "statusCode"]
-- ["CSo8NSObject", "text"]
 - ["PSo16NSObjectProtocol", "Encoding"]
 - ["PSo16NSObjectProtocol", "data"]
 - ["PSo16NSObjectProtocol", "init"]
-- ["PSo16NSObjectProtocol", "json"]
-- ["PSo16NSObjectProtocol", "ok"]
-- ["PSo16NSObjectProtocol", "statusCode"]
-- ["PSo16NSObjectProtocol", "text"]
 - ["PSo14NSSecureCoding", "Encoding"]
 - ["PSo14NSSecureCoding", "data"]
 - ["PSo14NSSecureCoding", "init"]
@@ -213,6 +187,8 @@ depends-member:
 - ["Ps16RawRepresentable", "string"]
 - ["Ps16RawRepresentable", "subscript"]
 - ["Ps16RawRepresentable", "utf8"]
+- ["C9Alamofire7Request", "authorizationHeader"]
+- ["C9Alamofire7Request", "responseJSON"]
 - ["Ps8Sequence", "init"]
 - ["Ps8Sequence", "string"]
 - ["Ps8Sequence", "subscript"]
@@ -228,6 +204,9 @@ depends-member:
 - ["Ps20TextOutputStreamable", "data"]
 - ["Ps20TextOutputStreamable", "init"]
 - ["Vs5UInt8", "init"]
+- ["P9Alamofire14URLConvertible", "Encoding"]
+- ["P9Alamofire14URLConvertible", "data"]
+- ["P9Alamofire14URLConvertible", "init"]
 - ["Sc", "init"]
 - ["Ps15UnsignedInteger", "init"]
 - ["Ps14_ArrayProtocol", "subscript"]
@@ -258,10 +237,6 @@ depends-member:
 - ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - ["Ps9_Hashable", "data"]
 - ["Ps9_Hashable", "init"]
-- ["Ps9_Hashable", "json"]
-- ["Ps9_Hashable", "ok"]
-- ["Ps9_Hashable", "statusCode"]
-- ["Ps9_Hashable", "text"]
 - ["Ps9_Hashable", "utf8"]
 - ["Ps14_Incrementable", "init"]
 - ["Ps10_Indexable", "init"]
@@ -296,6 +271,8 @@ depends-nominal:
 - "Ps29CustomPlaygroundQuickLookable"
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
+- "C9Alamofire11DataRequest"
+- "Vs10Dictionary"
 - "VE10FoundationSS8Encoding"
 - "Ps9Equatable"
 - "Ps25ExpressibleByArrayLiteral"
@@ -307,13 +284,11 @@ depends-nominal:
 - "Ps23ExpressibleByNilLiteral"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
-- "C4Just10HTTPResult"
 - "Ps8Hashable"
 - "Ps7Integer"
 - "Ps17IntegerArithmetic"
 - "V10SwiftyJSON4JSON"
 - "P10SwiftyJSON17JSONSubscriptType"
-- "V4Just6JustOf"
 - "Ps25LosslessStringConvertible"
 - "Ps10MirrorPath"
 - "Ps17MutableCollection"
@@ -327,6 +302,7 @@ depends-nominal:
 - "Ps22RandomAccessCollection"
 - "Ps26RangeReplaceableCollection"
 - "Ps16RawRepresentable"
+- "C9Alamofire7Request"
 - "Ps8Sequence"
 - "Vs5Slice"
 - "Ps10Strideable"
@@ -334,6 +310,7 @@ depends-nominal:
 - "Ps16TextOutputStream"
 - "Ps20TextOutputStreamable"
 - "Vs5UInt8"
+- "P9Alamofire14URLConvertible"
 - "Sc"
 - "Ps15UnsignedInteger"
 - "Ps14_ArrayProtocol"
@@ -369,6 +346,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.swiftmodule"
+- "/Users/wz3264/dev/swift/QueryCasper/.build/debug/Alamofire.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
@@ -376,5 +354,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Users/wz3264/dev/swift/QueryCasper/.build/debug/Just.swiftmodule"
-interface-hash: "5ff913232caac71389a8aed98c970b43"
+interface-hash: "e65dce7481f6002691fe9927b0fa635a"

@@ -1,11 +1,11 @@
 {
   "": {
-    "swift-dependencies": "/Users/wz3264/dev/swift/oldQueryCasper/.build/debug/SwiftyJSON.build/master.swiftdeps"
+    "swift-dependencies": "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.build/master.swiftdeps"
   },
-  "/Users/wz3264/dev/swift/oldQueryCasper/.build/checkouts/SwiftyJSON.git-3043514560129222422/Source/SwiftyJSON.swift": {
-    "dependencies": "/Users/wz3264/dev/swift/oldQueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON.d",
-    "object": "/Users/wz3264/dev/swift/oldQueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON.swift.o",
-    "swiftmodule": "/Users/wz3264/dev/swift/oldQueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON~partial.swiftmodule",
-    "swift-dependencies": "/Users/wz3264/dev/swift/oldQueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON.swiftdeps"
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/SwiftyJSON.git-3043514560129222422/Source/SwiftyJSON.swift": {
+    "dependencies": "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON.d",
+    "object": "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON.swift.o",
+    "swiftmodule": "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON~partial.swiftmodule",
+    "swift-dependencies": "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.build/SwiftyJSON.swiftdeps"
   }
 }
