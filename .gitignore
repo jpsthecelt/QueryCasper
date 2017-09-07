@@ -5,3 +5,5 @@
 /.build/repositories
 /.build/workspace-state.json
 /Packages
+
+*.py
