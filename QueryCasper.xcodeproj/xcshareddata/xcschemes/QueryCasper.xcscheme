@@ -96,7 +96,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-f &quot;/Users/wz3264/auth.txt&quot;"
+            argument = "-a &quot;/Users/wz3264/auth.txt&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

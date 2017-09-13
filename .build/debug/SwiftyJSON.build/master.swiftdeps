@@ -1,5 +1,5 @@
 version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
 options: "11323bedd46388c341cc1c7b1a407759"
-build_time: [558109668, 613531000]
+build_time: [558651615, 332216000]
 inputs:
-  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/SwiftyJSON.git-3043514560129222422/Source/SwiftyJSON.swift": [558109667, 0]
+  "/Users/wz3264/dev/swift/QueryCasper/.build/checkouts/SwiftyJSON.git-3043514560129222422/Source/SwiftyJSON.swift": [558651613, 0]

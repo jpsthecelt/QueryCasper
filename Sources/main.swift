@@ -21,25 +21,14 @@ enum jssRestFunction: String {
 }
 
 let pattern = "g:s:a:u:p:"
-var aFlag = false
-var aVal: String?
-
-var uFlag = false
-var uValue: String?
-
-var sFlag = false
-var sValue: String?
-
-var pFlag = false
-var pValue: String?
-
-var gFlag = false
-var gValue: String?
-
 let jssUrl = "https://casper.csueastbay.edu:8443/JSSResource/"
 
 var jssGroupName: String
 var textField: String
+
+// Usage: QueryCasper -a json_authorization_file.txt -p sub_url -g group -s serialnumber or
+//        QueryCasper -u username:password -p sub_url
+// NOTE: -a & -u are mutually-exclusive
 
 class JSS {
     
@@ -47,13 +36,84 @@ class JSS {
     private var jssUsername: String = ""
     private var jssPassword: String = ""
 
+    private var aFlag = false
+    private var aVal: String?
+    private var uFlag = false
+    private var uValue: String?
+    private var sFlag = false
+    var sValue: String?
+    private var pFlag = false
+    var pValue: String?
+    private var gFlag = false
+    var gValue: String?
 
-    init(serverURL: String = jssUrl, jamfUsername: String, jamfPassword: String) {
+    init?(serverURL: String = jssUrl, ac: Int32, av: UnsafePointer<UnsafeMutablePointer<Int8>?>!) {
+//  init(serverURL: String = jssUrl, jamfUsername: String, jamfPassword: String) {
         self.baseJssUrl = serverURL
 //        self.auth = "\(jamfUsername):\(jamfPassword)".dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions(NSData.Base64EncodingOptions.Encoding64CharacterLineLength)
-        self.jssUsername = jamfUsername
-        self.jssPassword = jamfPassword
+
+    while case let option = getopt(CommandLine.argc, CommandLine.unsafeArgv, pattern), option != -1 {
+        switch UnicodeScalar(CUnsignedChar(option)) {
+        case "u":
+            uFlag = true
+            uValue = String(cString: optarg)
+            
+        case "a":
+            aFlag = true
+            aVal = String(cString: optarg)
+            
+        case "p":
+            pFlag = true
+            pValue = String(cString: optarg)
+    
+        case "g":
+            gFlag = true
+            gValue = String(cString: optarg)
+    
+        case "s":
+            sFlag = true
+            sValue = String(cString: optarg)
+    
+        default:
+    //        fatalError("Unknown option")
+            print("Unknown Option: \(CommandLine.arguments[0])")
+            exit(EXIT_FAILURE)
+        }
     }
+
+    // the following is the same thing as a logical XOR
+    guard  uFlag != aFlag else {
+        print("-u or -a, Either command-line flag option may be used; not both")
+        exit(EXIT_FAILURE)
+    }
+    print("aFlag = \(aFlag) and aValue = ", aVal ?? "?")
+    print("uFlag = \(uFlag) and uValue = ", uValue ?? "?", "\n")
+    print("pFlag = \(pFlag) and pValue = ", pValue ?? "?", "\n")
+    
+    // Now, if the fFlag is set, we've gotten our parameter file from the command-line, so we'll try to read it, parse, it and
+    //    use it to access JAMF.
+    if self.aFlag {
+        do {
+            let filedata = try String(contentsOfFile: self.aVal!, encoding: String.Encoding.utf8)
+    
+            if let authProps = filedata.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+                let json = JSON(data: authProps)
+
+               self.jssUsername = json["username"].string ?? ""
+               self.jssPassword = json["password"].string ?? ""
+               return
+        }
+        } catch {
+            print(error)
+        }
+        
+//        } catch e: NSError {
+//            print("Error reading init-file: \(e)")
+//        }
+    }
+    
+    
+        }
     
     func getComputerRecord(subPath: String, serialNumber: String) {
         
@@ -185,6 +245,8 @@ class JSS {
                 "</computer_group>"
         
         let removeUrl: String = self.baseJssUrl + "/computergroups/name/\(groupName)"
+        print("The removeURL is: \(removeUrl)")
+        
         let xmlData = xml.data(using: String.Encoding.utf8, allowLossyConversion: true)
 
         let groupsUrl: String = jssUrl + subPath
@@ -293,7 +355,7 @@ class JSS {
         let resultText = getResult.text!.data(using: String.Encoding.utf8)!
     //    do {
             if let json = try? JSONSerialization.jsonObject(with: resultText) as? [String:Any],
-                                          let computers = json?["computers"] as? [[String:Any]] {
+                              let computers = json?["computers"] as? [[String:Any]] {
 
                 let loopCount: Int = computers.count
                 for index in 0 ..< loopCount {
@@ -307,90 +369,32 @@ class JSS {
     } // End getComputers function
 } // End jss class
 
-
-// Usage: QueryCasper -a json_authorization_file.txt -p sub_url -g group -s serialnumber or
-//        QueryCasper -u username:password -p sub_url
-// NOTE: -a & -u are mutually-exclusive
-
-while case let option = getopt(CommandLine.argc, CommandLine.unsafeArgv, pattern), option != -1 {
-    switch UnicodeScalar(CUnsignedChar(option)) {
-    case "u":
-        uFlag = true
-        uValue = String(cString: optarg)
-        
-    case "a":
-        aFlag = true
-        aVal = String(cString: optarg)
-        
-    case "p":
-        pFlag = true
-        pValue = String(cString: optarg)
-
-    case "g":
-        gFlag = true
-        gValue = String(cString: optarg)
-
-    case "s":
-        sFlag = true
-        sValue = String(cString: optarg)
-
-    default:
-//        fatalError("Unknown option")
-        print("Unknown Option: \(CommandLine.arguments[0])")
-        exit(EXIT_FAILURE)
-    }
-}
-
-// the following is the same thing as a logical XOR
-guard  uFlag != aFlag else {
-    print("-u or -a, Either command-line flag option may be used; not both")
-    exit(EXIT_FAILURE)
-}
-print("aFlag = \(aFlag) and aValue = ", aVal ?? "?")
-print("uFlag = \(uFlag) and uValue = ", uValue ?? "?", "\n")
-print("pFlag = \(pFlag) and pValue = ", pValue ?? "?", "\n")
-
-// Now, if the fFlag is set, we've gotten our parameter file from the command-line, so we'll try to read it, parse, it and
-//    use it to access JAMF.
-if aFlag {
-    do {
-        var filedata = try String(contentsOfFile: aVal!, encoding: String.Encoding.utf8)
-
-        if let authProps = filedata.data(using: String.Encoding.utf8, allowLossyConversion: false) {
-            let json = JSON(data: authProps)
-
-            let jssUsername = json["username"].string
-            let jssPassword = json["password"].string
-
-            var jssRoot = JSS(jamfUsername: jssUsername!, jamfPassword: jssPassword! )
+        if let jssRoot = JSS(ac: CommandLine.argc, av: CommandLine.unsafeArgv) {
             
-            
-            switch pValue! {
+            switch jssRoot.pValue! {
 
             case jssRestFunction.computers.rawValue:
-                jssRoot.getComputers(subPath: pValue!)
+                jssRoot.getComputers(subPath: jssRoot.pValue!)
                 
             case jssRestFunction.mobiledevices.rawValue:
-                jssRoot.getMobiles(subPath: pValue!)
+                jssRoot.getMobiles(subPath: jssRoot.pValue!)
 
             case jssRestFunction.computermatch.rawValue:
-                jssRoot.getComputerRecord(subPath: "computers/match", serialNumber: sValue!)
+                jssRoot.getComputerRecord(subPath: "computers/match", serialNumber: jssRoot.sValue!)
 
             case jssRestFunction.computergroups.rawValue:
                 jssRoot.getComputerGroups(subPath: "computergroups")
 
             case jssRestFunction.removecomputerfromgroup.rawValue:
-                jssRoot.removeComputerFromGroup(subPath: "computergroups", serialNumber: sValue!, groupName: gValue!)
+                jssRoot.removeComputerFromGroup(subPath: "computergroups", serialNumber: jssRoot.sValue!, groupName: jssRoot.gValue!)
 
             case jssRestFunction.addcomputertogroup.rawValue:
-                jssRoot.addComputerToGroup(subPath: "computergroups", serialNumber: sValue!, groupName: gValue!)
+                jssRoot.addComputerToGroup(subPath: "computergroups", serialNumber: jssRoot.sValue!, groupName: jssRoot.gValue!)
 
             case jssRestFunction.createplaceholder.rawValue:
-                jssRoot.createPlaceholder(subPath: "computergroups", serialNumber: sValue!, macAddress: gValue!)
+                jssRoot.createPlaceholder(subPath: "computergroups", serialNumber: jssRoot.sValue!, macAddress: jssRoot.gValue!)
 
             default:
                 print("Jss Function not matched by input! (terminating)")
             }
         }
-    }
-}
