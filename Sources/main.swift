@@ -13,7 +13,7 @@ import Just
 enum jssRestFunction: String {
     case computers
     case mobiledevices
-    case computermatch
+    case computerrecord
     case computergroups
     case removecomputerfromgroup
     case addcomputertogroup
@@ -380,7 +380,7 @@ class JSS {
             case jssRestFunction.mobiledevices.rawValue:
                 jssRoot.getMobiles(subPath: jssRoot.pValue!)
 
-            case jssRestFunction.computermatch.rawValue:
+            case jssRestFunction.computerrecord.rawValue:
                 jssRoot.getComputerRecord(subPath: "computers/match", serialNumber: jssRoot.sValue!)
 
             case jssRestFunction.computergroups.rawValue:
