@@ -117,7 +117,7 @@ class JSS {
     
     func getComputerRecord(subPath: String, serialNumber: String) {
         
-        let computersUrl: String = self.baseJssUrl + "/computers/match/\(serialNumber)"
+        let computersUrl: String = self.baseJssUrl + "computers/match/\(serialNumber)"
         let getResult = Just.get(computersUrl, headers: ["accept":"application/json"], auth: (self.jssUsername,self.jssPassword))
         if (getResult.ok) {
             // Success Function
@@ -296,7 +296,7 @@ class JSS {
         // Try JSON extraction, looking for dictionary at 'computers' index; then loop through all elements...
         let resultText = getResult.text!.data(using: String.Encoding.utf8)!
         if let json = try? JSONSerialization.jsonObject(with: resultText) as? [String:Any],
-           let groups = json?["mobile_devices"] as? [[String:Any]] {
+           let groups = json?["computer_groups"] as? [[String:Any]] {
 
             let loopCount: Int = groups.count
             for index in 0 ..< loopCount {
@@ -353,22 +353,23 @@ class JSS {
     
         // Try JSON extraction, looking for dictionary at 'computers' index; then loop through all elements...
         let resultText = getResult.text!.data(using: String.Encoding.utf8)!
-    //    do {
+//    do {
             if let json = try? JSONSerialization.jsonObject(with: resultText) as? [String:Any],
                               let computers = json?["computers"] as? [[String:Any]] {
 
                 let loopCount: Int = computers.count
                 for index in 0 ..< loopCount {
                     print(computers[index])
-                    }
+                }
             } else {
                 print("bad json - do some recovery")
           }
-// } catch error as NSError { }
+// } catch (error as NSError) { }
 
     } // End getComputers function
 } // End jss class
 
+// Start of main logic... If all goes well with initialization, switch on indicated JSS command-function
         if let jssRoot = JSS(ac: CommandLine.argc, av: CommandLine.unsafeArgv) {
             
             switch jssRoot.pValue! {
@@ -397,4 +398,7 @@ class JSS {
             default:
                 print("Jss Function not matched by input! (terminating)")
             }
+        } else {
+            print("Improper JSS-access initialization: exiting...")
+            exit(EXIT_FAILURE)
         }

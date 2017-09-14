@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="QueryCasper" type="AppleRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-a &quot;/Users/wz3264/auth.txt&quot; -p &quot;computers&quot;" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QueryCasper" TARGET_NAME="SwiftyJSON" CONFIG_NAME="Debug" SCHEME_NAME="QueryCasper" RUN_TARGET_PROJECT_NAME="QueryCasper" RUN_TARGET_NAME="QueryCasper" MAKE_ACTIVE="TRUE">
+  <configuration default="false" name="QueryCasper" type="AppleRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-a &quot;/Users/wz3264/auth.txt&quot; -p computermatch -s C02V90X4J1GN" PASS_PARENT_ENVS_2="true" PROJECT_NAME="QueryCasper" TARGET_NAME="SwiftyJSON" CONFIG_NAME="Debug" SCHEME_NAME="QueryCasper" RUN_TARGET_PROJECT_NAME="QueryCasper" RUN_TARGET_NAME="QueryCasper" MAKE_ACTIVE="TRUE">
     <envs />
     <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
       <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />

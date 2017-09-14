@@ -6,8 +6,6 @@ provides-top-level:
 - "jssGroupName"
 - "textField"
 - "JSS"
-- "jssUsername"
-- "jssPassword"
 provides-nominal:
 - "O11QueryCasper15jssRestFunction"
 - "C11QueryCasper3JSS"
@@ -28,10 +26,12 @@ depends-top-level:
 - "CastingPrecedence"
 - "CommandLine"
 - !private "Dictionary"
-- !private "EXIT_FAILURE"
+- "EXIT_FAILURE"
+- !private "FloatLiteralType"
 - !private "Int"
 - "Int32"
 - "Int8"
+- !private "IntegerLiteralType"
 - !private "JSON"
 - !private "JSONSerialization"
 - "JSS"
@@ -42,18 +42,14 @@ depends-top-level:
 - !private "UnicodeScalarType"
 - "UnsafeMutablePointer"
 - "UnsafePointer"
-- !private "exit"
-- "gValue"
+- "exit"
 - !private "getopt"
-- "json"
 - "jssGroupName"
 - "jssRestFunction"
 - "jssUrl"
 - !private "optarg"
-- "pValue"
 - "pattern"
 - "print"
-- "sValue"
 - "textField"
 - !private "~="
 depends-member:
@@ -74,7 +70,7 @@ depends-member:
 - !private ["Ps9AnyObject", "data"]
 - !private ["Ps9AnyObject", "exit"]
 - !private ["Ps9AnyObject", "gFlag"]
-- !private ["Ps9AnyObject", "gValue"]
+- ["Ps9AnyObject", "gValue"]
 - ["Ps9AnyObject", "getComputerGroups"]
 - ["Ps9AnyObject", "getComputerRecord"]
 - ["Ps9AnyObject", "getComputers"]
@@ -88,12 +84,12 @@ depends-member:
 - !private ["Ps9AnyObject", "ok"]
 - !private ["Ps9AnyObject", "optarg"]
 - !private ["Ps9AnyObject", "pFlag"]
-- !private ["Ps9AnyObject", "pValue"]
+- ["Ps9AnyObject", "pValue"]
 - !private ["Ps9AnyObject", "pattern"]
 - !private ["Ps9AnyObject", "print"]
 - ["Ps9AnyObject", "removeComputerFromGroup"]
 - !private ["Ps9AnyObject", "sFlag"]
-- !private ["Ps9AnyObject", "sValue"]
+- ["Ps9AnyObject", "sValue"]
 - !private ["Ps9AnyObject", "statusCode"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "uFlag"]
@@ -105,7 +101,7 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "subscript"]
 - !private ["Ps17BitwiseOperations", "hashValue"]
 - !private ["Ps17BitwiseOperations", "init"]
-- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps7CVarArg", "Encoding"]
 - !private ["Ps7CVarArg", "count"]
 - !private ["Ps7CVarArg", "data"]
@@ -140,19 +136,19 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Encoding"]
-- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "data"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "hashValue"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
 - !private ["Ps17CustomReflectable", "Encoding"]
-- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
 - !private ["Ps17CustomReflectable", "count"]
 - !private ["Ps17CustomReflectable", "data"]
 - !private ["Ps17CustomReflectable", "hashValue"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps23CustomStringConvertible", "Encoding"]
-- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "data"]
 - !private ["Ps23CustomStringConvertible", "hashValue"]
@@ -167,7 +163,7 @@ depends-member:
 - !private ["Vs10Dictionary", "subscript"]
 - !private ["VE10FoundationSS8Encoding", "utf8"]
 - !private ["Ps9Equatable", "Encoding"]
-- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "_toAnyHashable"]
 - ["Ps9Equatable", "addcomputertogroup"]
 - ["Ps9Equatable", "computergroups"]
@@ -192,7 +188,7 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "init"]
 - !private ["Ps25ExpressibleByArrayLiteral", "string"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
-- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "init"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "string"]
 - !private ["Ps27ExpressibleByBooleanLiteral", "subscript"]
@@ -228,7 +224,7 @@ depends-member:
 - !private ["C4Just10HTTPResult", "statusCode"]
 - !private ["C4Just10HTTPResult", "text"]
 - !private ["Ps8Hashable", "Encoding"]
-- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "_toAnyHashable"]
 - ["Ps8Hashable", "addcomputertogroup"]
 - ["Ps8Hashable", "computergroups"]
@@ -304,7 +300,7 @@ depends-member:
 - !private ["V4Just6JustOf", "get"]
 - !private ["V4Just6JustOf", "post"]
 - !private ["Ps25LosslessStringConvertible", "Encoding"]
-- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps25LosslessStringConvertible", "data"]
 - ["Ps25LosslessStringConvertible", "init"]
 - !private ["Ps10MirrorPath", "Encoding"]
@@ -388,7 +384,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "count"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps28_DisallowMixedSignArithmetic", "init"]
-- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "Encoding"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "data"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
@@ -410,7 +406,7 @@ depends-member:
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "data"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "Encoding"]
-- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - ["Ps9_Hashable", "_toAnyHashable"]
 - ["Ps9_Hashable", "addcomputertogroup"]
 - ["Ps9_Hashable", "computergroups"]
@@ -446,7 +442,7 @@ depends-member:
 - !private ["Ps17_MutableIndexable", "count"]
 - !private ["Ps17_MutableIndexable", "subscript"]
 - !private ["Ps21_ObjectiveCBridgeable", "Encoding"]
-- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - !private ["Ps21_ObjectiveCBridgeable", "data"]
 - !private ["Ps21_ObjectiveCBridgeable", "hashValue"]
@@ -478,7 +474,7 @@ depends-nominal:
 - !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps17BitwiseOperations"
-- !private "Sb"
+- "Sb"
 - "Ps7CVarArg"
 - !private "Ps10Collection"
 - "Os11CommandLine"
@@ -491,7 +487,7 @@ depends-nominal:
 - !private "VE10FoundationSS8Encoding"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
-- !private "Ps27ExpressibleByBooleanLiteral"
+- "Ps27ExpressibleByBooleanLiteral"
 - !private "Ps30ExpressibleByDictionaryLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - !private "Ps25ExpressibleByFloatLiteral"
@@ -537,7 +533,7 @@ depends-nominal:
 - !private "Ps23_BidirectionalIndexable"
 - !private "Ps24_DestructorSafeContainer"
 - !private "Ps28_DisallowMixedSignArithmetic"
-- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - "Ps34_ExpressibleByBuiltinStringLiteral"
@@ -568,7 +564,6 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
 - "/Users/wz3264/dev/swift/QueryCasper/.build/debug/SwiftyJSON.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/simd.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
@@ -577,4 +572,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/wz3264/dev/swift/QueryCasper/.build/debug/Just.swiftmodule"
-interface-hash: "25485525a7e441f36b17d30353477052"
+interface-hash: "cb648ad94606a7a5967b38f21f4bdc57"
