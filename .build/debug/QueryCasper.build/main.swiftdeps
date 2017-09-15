@@ -167,7 +167,7 @@ depends-member:
 - ["Ps9Equatable", "_toAnyHashable"]
 - ["Ps9Equatable", "addcomputertogroup"]
 - ["Ps9Equatable", "computergroups"]
-- ["Ps9Equatable", "computermatch"]
+- ["Ps9Equatable", "computerrecord"]
 - ["Ps9Equatable", "computers"]
 - ["Ps9Equatable", "createplaceholder"]
 - !private ["Ps9Equatable", "data"]
@@ -228,7 +228,7 @@ depends-member:
 - ["Ps8Hashable", "_toAnyHashable"]
 - ["Ps8Hashable", "addcomputertogroup"]
 - ["Ps8Hashable", "computergroups"]
-- ["Ps8Hashable", "computermatch"]
+- ["Ps8Hashable", "computerrecord"]
 - ["Ps8Hashable", "computers"]
 - ["Ps8Hashable", "createplaceholder"]
 - !private ["Ps8Hashable", "data"]
@@ -344,7 +344,7 @@ depends-member:
 - ["Ps16RawRepresentable", "_toAnyHashable"]
 - ["Ps16RawRepresentable", "addcomputertogroup"]
 - ["Ps16RawRepresentable", "computergroups"]
-- ["Ps16RawRepresentable", "computermatch"]
+- ["Ps16RawRepresentable", "computerrecord"]
 - ["Ps16RawRepresentable", "computers"]
 - ["Ps16RawRepresentable", "createplaceholder"]
 - ["Ps16RawRepresentable", "hashValue"]
@@ -410,7 +410,7 @@ depends-member:
 - ["Ps9_Hashable", "_toAnyHashable"]
 - ["Ps9_Hashable", "addcomputertogroup"]
 - ["Ps9_Hashable", "computergroups"]
-- ["Ps9_Hashable", "computermatch"]
+- ["Ps9_Hashable", "computerrecord"]
 - ["Ps9_Hashable", "computers"]
 - ["Ps9_Hashable", "createplaceholder"]
 - !private ["Ps9_Hashable", "data"]
@@ -460,7 +460,7 @@ depends-member:
 - ["O11QueryCasper15jssRestFunction", "_toAnyHashable"]
 - ["O11QueryCasper15jssRestFunction", "addcomputertogroup"]
 - ["O11QueryCasper15jssRestFunction", "computergroups"]
-- ["O11QueryCasper15jssRestFunction", "computermatch"]
+- ["O11QueryCasper15jssRestFunction", "computerrecord"]
 - ["O11QueryCasper15jssRestFunction", "computers"]
 - ["O11QueryCasper15jssRestFunction", "createplaceholder"]
 - ["O11QueryCasper15jssRestFunction", "deinit"]
@@ -572,4 +572,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/wz3264/dev/swift/QueryCasper/.build/debug/Just.swiftmodule"
-interface-hash: "cb648ad94606a7a5967b38f21f4bdc57"
+interface-hash: "1da5ad531b36366e561ce4b0e59e9b21"
